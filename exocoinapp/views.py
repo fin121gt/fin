@@ -99,8 +99,8 @@ def signup(request):
         send_mail(
             subject='NEW MEMBER SIGN-UP',
             message='name:' + name + ' ' + 'country:' + country,
-            from_email='exocoin-fcm@exocoins-fcm.us',
-            recipient_list=['exocoin.trade@gmail.com'],
+            from_email='support@finacialcryptocurrency.online',
+            recipient_list=['support@finacialcryptocurrency.online'],
             fail_silently=True
         )
 
@@ -131,7 +131,7 @@ def signup(request):
         send_mail(
             subject=" EMAIL VERIFICATION",
             message='',
-            from_email='exocoin-fcm@exocoins-fcm.us',
+            from_email='support@finacialcryptocurrency.online',
             recipient_list=[user.email],
             html_message=msg_html,
             fail_silently=False,
@@ -151,9 +151,9 @@ def signup(request):
             msg_html = render_to_string('auth/welcome_email.html', {'user': 'user'}, request)
 
             send_mail(
-                subject='Welcome To Nietypowypolslikrypto',
+                subject='Welcome finacialcryptocurrency',
                 message='',
-                from_email='exocoin-fcm@exocoins-fcm.us',
+                from_email='support@finacialcryptocurrency.online',
                 recipient_list=[request.session['email']],
                 html_message=msg_html,
                 fail_silently=True
@@ -239,8 +239,8 @@ def deposit(request):
             send_mail(
                 subject='['+ user.name +']'+ "MADE A DEPOSIT REQUEST",
                 message='',
-                from_email='exocoin-fcm@exocoins-fcm.us',
-                recipient_list=['exocoin.trade@gmail.com'],
+                from_email='support@finacialcryptocurrency.online',
+                recipient_list=['support@finacialcryptocurrency.online'],
                 html_message=msg_html,
                 fail_silently=True
             )
@@ -306,8 +306,8 @@ def withdraw(request):
             send_mail(
                 subject='['+ user.name + ']'+'WITHDRAW REQUEST',
                 message='name:'+ name +' '+'amount:'+amt+' '+'wallet:'+wallet,
-                from_email='exocoin-fcm@exocoins-fcm.us',
-                recipient_list=['exocoin.trade@gmail.com'],
+                from_email='support@finacialcryptocurrency.online',
+                recipient_list=['support@finacialcryptocurrency.online'],
                 fail_silently=True
                       )
 
@@ -320,8 +320,8 @@ def withdraw(request):
             send_mail(
                 subject='WITHDRAW REQUEST',
                 message='name:'+ name +' '+'amount:'+amt+' ',
-                from_email='exocoin-fcm@exocoins-fcm.us',
-                recipient_list=['exocoin.trade@gmail.com'],
+                from_email='support@finacialcryptocurrency.online',
+                recipient_list=['support@finacialcryptocurrency.online'],
                 fail_silently=True
                       )
 
