@@ -33,7 +33,7 @@ def index(request):
         ref = request.GET.get('ref')
         request.session['ref']=ref
     return render(request, 'home/index.html',{'site':site})
-e
+
 
 def about(request):
     site = Manage.objects.get(site='site')
